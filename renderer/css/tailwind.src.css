@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============ خط Cairo محلي بالكامل (بدون Google Fonts) ============ */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/cairo-arabic-400.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF,
+    U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/cairo-latin-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/cairo-arabic-600.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF,
+    U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/cairo-latin-600.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/cairo-arabic-700.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF,
+    U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/cairo-latin-700.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../fonts/cairo-arabic-800.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF,
+    U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../fonts/cairo-latin-800.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --product-card-width: 110px;
+  --product-name-font-size: 12px;
+  --product-price-font-size: 12px;
+  --product-image-height: 60px;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+html, body { height: 100%; overflow: hidden; background-color: #f1f5f9; }
+body { font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+.app-container { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+.nav-btn { padding: .4rem .8rem; border-radius: .5rem; font-size: .875rem; font-weight: 600; transition: .15s; white-space: nowrap; }
+.nav-btn.active { background: #10b981; color: #fff; }
+.nav-btn:not(.active) { color: #cbd5e1; }
+.nav-btn:not(.active):hover { background: #1e293b; }
+
+.pay-btn {
+  padding: .55rem .4rem; border-radius: .5rem; font-size: .8rem; font-weight: 700;
+  background: #e2e8f0; color: #334155; transition: all .1s; border: 1px solid transparent;
+}
+.pay-btn.active { background: #0f172a; color: #fff; border-color: #0f172a; }
+.pay-btn:not(.active):hover { background: #cbd5e1; }
+
+input, select, textarea { outline: none; }
+input:focus, select:focus, textarea:focus { border-color: #10b981; box-shadow: 0 0 0 3px rgba(16,185,129,.15); }
+input[type="number"] { -moz-appearance: textfield; }
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+.notice-anim { animation: dropIn .25s ease; }
+@keyframes dropIn { from { transform: translateY(-10px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
+
+.toast-anim { animation: slideIn .25s ease; }
+@keyframes slideIn { from { transform: translate(-50%, 20px); opacity: 0 } to { transform: translate(-50%, 0); opacity: 1 } }
+#toast { transform: translateX(-50%); }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+#productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--product-card-width), 1fr));
+  gap: .5rem;
+  align-content: start;
+}
+.product-card { width: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+.product-name { font-size: var(--product-name-font-size); line-height: 1.2; }
+.product-price { font-size: var(--product-price-font-size); }
+.product-image { height: var(--product-image-height); width: 100%; }
+.product-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.calc-btn {
+  padding: 1rem; font-size: 1.35rem; font-weight: bold; border-radius: .75rem; background: #e2e8f0;
+  transition: .1s; font-family: 'Cairo', sans-serif; display: flex; align-items: center;
+  justify-content: center; min-height: 55px;
+}
+.calc-btn:active { background: #cbd5e1; transform: scale(.96); }
+.calc-op { background: #f59e0b; color: #fff; }
+.calc-eq { background: #10b981; color: #fff; }
+
+.skeleton { background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 37%, #e2e8f0 63%); background-size: 400% 100%; animation: shimmer 1.4s ease infinite; }
+@keyframes shimmer { 0% { background-position: 100% 50% } 100% { background-position: 0 50% } }
+
+/* ==================== التحديد والنسخ العام ====================
+   كل النصوص والجداول والفواتير قابلة للتحديد والنسخ بالفأرة ولوحة المفاتيح. */
+html, body { -webkit-user-select: text; user-select: text; }
+input, textarea, select, table, th, td { -webkit-user-select: text; user-select: text; }
+/* استثناء صارم: حقول كلمات المرور لا تُحدَّد ولا تُنسخ */
+input[type="password"], [data-secret="1"] {
+  -webkit-user-select: none; user-select: none; -webkit-user-drag: none;
+}
+
+/* ==================== توحيد أزرار الأدوات والإغلاق ==================== */
+.toolbar-actions { display: flex; flex-wrap: wrap; gap: .5rem; align-items: stretch; }
+.toolbar-actions > button {
+  display: inline-flex; align-items: center; justify-content: center; gap: .35rem;
+  min-height: 2.25rem; padding: .45rem .85rem; border-radius: .5rem;
+  font-weight: 700; font-size: .875rem; white-space: nowrap; line-height: 1;
+}
+.shift-close-btn { min-height: 3.25rem; }
+@media (max-width: 640px) {
+  .toolbar-actions > button { flex: 1 1 auto; font-size: .8rem; }
+}

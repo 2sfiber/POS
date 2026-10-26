@@ -1,0 +1,32 @@
+{
+  "name": "pos-pro-desktop",
+  "productName": "POS Pro",
+  "version": "2.1.0",
+  "description": "نظام نقاط البيع الاحترافي - تطبيق سطح مكتب يعمل بدون إنترنت",
+  "main": "electron/main.js",
+  "author": "عماد عقلان",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node scripts/run-tests.js",
+    "css": "tailwindcss -i ./renderer/css/tailwind.src.css -o ./renderer/css/app.css --minify",
+    "icon": "node scripts/make-icon.js",
+    "pack:win": "electron-packager . \"POS Pro\" --platform=win32 --arch=x64 --out=dist --overwrite --asar --icon=build/icon.ico --prune=true --ignore=\"^/dist$\" --ignore=\"^/artifacts$\" --ignore=\"^/test$\"",
+    "zip:win": "node scripts/pack-zip.js",
+    "update:win": "node scripts/pack-update.js",
+    "dist:win": "npm run pack:win && npm run zip:win && npm run update:win && npm run installer:win",
+    "installer:win": "node scripts/build-installer.js",
+    "test:unit": "node test/escpos-unit.js && node test/updater-unit.js && node test/db-unit.js"
+  },
+  "dependencies": {
+    "@fontsource/cairo": "^5.3.0",
+    "exceljs": "^4.4.0",
+    "jsbarcode": "^3.11.6"
+  },
+  "devDependencies": {
+    "@electron/packager": "^18.4.4",
+    "electron": "^38.8.6",
+    "tailwindcss": "^3.4.17"
+  }
+}
